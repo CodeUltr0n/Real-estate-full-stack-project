@@ -1,0 +1,198 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <style>
+      #filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem 0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .filter-controls {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .filter-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 2rem;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+.tax-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1rem;
+        font-size: 0.9rem;
+        border: 1px solid #ccc;
+        border-radius: 2rem;
+        height: 2.8rem;
+        padding: 0 1rem;
+        background-color: #f8f8f8;
+        width: max-content;
+        white-space: nowrap;
+      }
+
+
+      .filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        font-size: 0.85rem;
+      }
+
+      .filter:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .filter p {
+        margin: 0.5rem 0 0;
+        font-weight: 500;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      .filter i {
+        font-size: 1.6rem;
+      }
+
+      .tax-info {
+        display: none;
+      }
+      
+      
+    </style>
+
+    <div id="filters">
+      <div class="filter-controls">
+        <div class="filter-group">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-hotel"></i></div>
+                <p>Properties</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic Cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Mountains</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beach</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-water-ladder"></i></div>
+                <p>Amazing pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-route"></i></div>
+                <p>Nearby</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>Mansions</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-snowflake"></i></div>
+                <p>Arctic</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-tree-city"></i></div>
+                <p>Tropical</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-city"></i></div>
+                <p>Top cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-regular fa-building"></i></div>
+                <p>Towers</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-key"></i></div>
+                <p>New</p>
+            </div>
+        </div>
+        <div class="tax-toggle">
+          <div class=" form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" 
+            id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault"><b><i>Display Taxes</i></b></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 mt-3">
+        <% for (let listing of allListings) { %>
+            <a href="/listings/<%= listing._id %>" class="listing-link text-decoration-none">
+                <div class="card col position-relative listing-card" style="width: 18rem;">
+                    <img src="<%=listing.image && listing.image.url ?  listing.image.url : '/images/default.jpg' %>"
+                     class="card-img-top" alt="listing_image" style="height: 18rem;"/>         
+                    <!-- Overlay Section -->
+                    <div class="card-img-overlay overlay">
+                        <div class="card-body text-white">
+                            <h5 class="card-title"><b><%= listing.title %></b></h5>
+                            <p class="card-text">Price: &#8377;<%= listing.price %><i class="tax-info">&nbsp;&nbsp; +18% GST</i></p>
+                        </div> 
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+
+    <style>
+        .overlay {
+            background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: flex-end; /* Text at bottom */
+            padding: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+    </style>
+</body>
+
+<script>
+    let taxswitch = document.getElementById("switchCheckDefault");
+    taxswitch.addEventListener("click",()=>{
+        let taxinfo = document.getElementsByClassName("tax-info");
+        for(info of taxinfo){
+            if(info.style.display != "inline"){
+                info.style.display= "inline";
+            }else{info.style.display = "none";}
+            
+        }
+    })
+</script>
