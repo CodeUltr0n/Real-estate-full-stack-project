@@ -39,8 +39,7 @@ A feature-rich full-stack Real Estate web application built using the **MERN Sta
 
 🧠 Future Improvements
 	•	🏦 Payment Gateway Integration
-	•	📤 Image Upload via Cloudinary or S3
-	•	🔔 Email Notifications
+	•	🔔 Email Notifications & more...
 
 ⸻
 
