@@ -49,4 +49,7 @@ Made with ❤️ by Your Ketan Chokkara
 
 📜 License
 
-Licensed under the MIT License.
+## License
+
+This project is licensed under the GNU General Public License v3.0.
+For more details, please check the [LICENSE file](path/to/your/LICENSE).
