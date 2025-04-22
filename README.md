@@ -52,4 +52,4 @@ Made with ❤️ by Your Ketan Chokkara
 ## License
 
 This project is licensed under the GNU General Public License v3.0.
-For more details, please check the [LICENSE file](path/to/your/LICENSE).
+For more details, please check the [LICENSE file](LICENSE).
