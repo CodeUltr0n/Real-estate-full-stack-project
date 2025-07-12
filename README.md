@@ -36,6 +36,24 @@ A feature-rich full-stack Real Estate web application built using the **MERN Sta
 - 📊 Admin Panel for Managing Listings
 
 ---
+## 📸 Preview
+
+### 🏠 Home / Listings Page
+![real-estate](https://github.com/user-attachments/assets/9ebc7638-80c4-45ea-b24c-e5e91ea3f12f)
+
+### 📋 Property Details Page
+![real-estate-4](https://github.com/user-attachments/assets/7c2bcfc8-7a06-46c9-92da-1c77e8f6311f)
+
+### 🧑‍💼 User login page 
+![real-estate-3](https://github.com/user-attachments/assets/1c528aae-9b08-4ba4-8ffb-253eb6e1d285)
+
+### 🧑‍💼 User signup page 
+![real-estate-2](https://github.com/user-attachments/assets/3e204bd0-0ac4-4e0b-9812-752da4068d24)
+
+### 📍 Property location Details 
+![real-estate -6 ](https://github.com/user-attachments/assets/d91cbcec-4765-4023-954b-9dbb7d12e682)
+
+
 
 🧠 Future Improvements
 	•	🏦 Payment Gateway Integration
