@@ -15,7 +15,7 @@ A feature-rich full-stack Real Estate web application built using the **MERN Sta
 ### Frontend:
 - **EJS Templates**
 - **Axios**
-- **Router**
+- **JavaScript**
 - **Bootstrap** (CSS and JS)
 
 ### Backend:
