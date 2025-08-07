@@ -63,7 +63,7 @@ A feature-rich full-stack Real Estate web application built using the **MERN Sta
 
 🧑‍💻 Author
 
-Made with ❤️ by Your Ketan Chokkara
+Made with by Ketan Chokkara
 
 📜 License
 
