@@ -65,9 +65,7 @@ A feature-rich full-stack Real Estate web application built using the **MERN Sta
 
 Made by Ketan Chokkara
 
-📜 License
-
-## License
+##📜 License
 
 This project is licensed under the GNU General Public License v3.0.
 For more details, please check the [LICENSE file](LICENSE).
